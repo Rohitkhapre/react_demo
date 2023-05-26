@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        // Checkout your React application code from GitHub
+        // Checkout React application code from GitHub
         git 'https://github.com/Rohitkhapre/react_demo.git'
       }
     }
@@ -18,14 +18,14 @@ pipeline {
     
     stage('Build') {
       steps {
-        // Build your React application
+        // Build  React application
         sh 'npm run build'
       }
     }
     
     stage('Archive Build Artifacts') {
       steps {
-        // Archive the build artifacts (e.g., build output files)
+        // Archive the build artifacts
         archiveArtifacts 'build/**'
       }
     }
